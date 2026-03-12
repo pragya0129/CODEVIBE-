@@ -12,7 +12,10 @@ const server = http.Server(backend);
 
 backend.use(express.json());
 backend.use(cors({
-  origin: ["http://localhost:5173", "https://codevibe-frontend.onrender.com"],
+  origin: [
+    "http://localhost:5173",
+    "https://codevibeforyou.netlify.app" // ✅ add this
+  ],
   methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
 }));
 

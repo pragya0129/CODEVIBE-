@@ -1,33 +1,59 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 const App = () => {
-  const [data, setData] = useState(""); // Add this line
+  const [data, setData] = useState("");
 
-  const onFinish = () => {
-    axios
-      .post("https://codevibe-3.onrender.com/api/authRoutes", {
-        username: "Jiya",
-        Email: "jia@gmail.com",
-        college:"JMIT",
-        year:"3rd",
-        password: "yourpassword", 
-        resetOTP: null,
-        otpExpiry:null
-      })
-      .then((response) => {
-        setData(response.data.message);
-        console.log("Success:", response.data.message);
-      })
-      .catch((error) => {
-        setData(error?.response?.data?.message || "Something went wrong");
-        console.log("Error:", error?.response?.data?.message);
-      });
+  // SIGNUP
+  const handleSignup = async () => {
+    try {
+      const response = await axios.post(
+        "https://codevibe-3.onrender.com/api/auth/register",
+        {
+          username: "Jiya",
+          email: "jia@gmail.com",
+          college: "JMIT",
+          year: "3rd",
+          password: "yourpassword",
+        }
+      );
+
+      setData(response.data.message);
+      console.log("✅ Signup Success:", response.data);
+    } catch (error) {
+      setData(error?.response?.data?.message || "Signup failed");
+      console.log("❌ Signup Error:", error?.response?.data);
+    }
+  };
+
+  // LOGIN
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post(
+        "https://codevibe-3.onrender.com/api/auth/login",
+        {
+          email: "jia@gmail.com",
+          password: "yourpassword",
+        }
+      );
+
+      setData(response.data.message);
+      console.log("✅ Login Success:", response.data);
+    } catch (error) {
+      setData(error?.response?.data?.message || "Login failed");
+      console.log("❌ Login Error:", error?.response?.data);
+    }
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <button onClick={onFinish}>SUBMIT</button>
+    <div style={{ padding: "20px" }}>
+      <h2>Auth API Test</h2>
+
+      <button onClick={handleSignup}>Signup</button>
+      <button onClick={handleLogin} style={{ marginLeft: "10px" }}>
+        Login
+      </button>
+
       <p>Response: {data}</p>
     </div>
   );

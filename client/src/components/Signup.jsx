@@ -15,7 +15,7 @@ const SignUp = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("https://codevibe-backend.onrender.com/api/auth/register", {
+      const response = await axios.post("https://codevibe-3.onrender.com/api/auth/register", {
         username,
         Email:email,   // ✅ lowercase, same as Dashboard
         password,
