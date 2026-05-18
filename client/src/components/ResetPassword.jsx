@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import API_BASE_URL from "../config/api";
 
 const ResetPassword = () => {
   const [searchParams] = useSearchParams();
@@ -28,14 +29,10 @@ const ResetPassword = () => {
     setLoading(true);
     setResponseMsg("");
     try {
-      const backendUrl = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || window.location.hostname === "::1" || window.location.hostname.startsWith("192.168."))
-        ? "http://localhost:5002" 
-        : "https://codevibe-3.onrender.com";
-
-      console.log("Selected Backend URL:", backendUrl);
+      console.log("Using Backend URL:", API_BASE_URL);
       console.log("Current Hostname:", window.location.hostname);
 
-      const res = await axios.post(`${backendUrl}/api/auth/reset-password`, {
+      const res = await axios.post(`${API_BASE_URL}/api/auth/reset-password`, {
         token,
         newPassword,
       });

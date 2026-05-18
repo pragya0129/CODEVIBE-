@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import API_BASE_URL from '../config/api';
 
 const DSALesson = () => {
   const [completed, setCompleted] = useState([]);
@@ -10,7 +11,7 @@ const DSALesson = () => {
     const email = localStorage.getItem('userEmail');
     if (!email) return;
 
-    axios.get(`http://localhost:5002/api/progress/${email}`)
+    axios.get(`${API_BASE_URL}/api/progress/${email}`)
       .then(res => setCompleted(res.data.completedLessons || []))
       .catch(err => console.error(err));
   }, []);

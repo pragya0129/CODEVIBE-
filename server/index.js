@@ -14,14 +14,25 @@ const server = http.Server(backend);
 backend.use(express.json());
 backend.use(express.urlencoded({ extended: true }));
 
+// CORS Configuration - read allowed origins from environment or use defaults
+const allowedOrigins = (
+  process.env.ALLOWED_ORIGINS ||
+  "http://localhost:5173,http://localhost:3000,https://codevibeforyou.netlify.app"
+).split(",").map(origin => origin.trim());
+
 backend.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://codevibeforyou.netlify.app",
-    ],
+    origin: (origin, callback) => {
+      // Allow requests with no origin (like mobile apps or curl requests)
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 

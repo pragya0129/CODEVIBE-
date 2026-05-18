@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from 'react-router-dom';
+import API_BASE_URL from "../config/api";
 import forgotPic from "../assets/forgotPassword.png"
 
 const ForgotPassword = () => {
@@ -14,14 +15,9 @@ const ForgotPassword = () => {
     setLoading(true);
     setResponseMsg("");
     try {
-      const backendUrl = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1" || window.location.hostname === "::1" || window.location.hostname.startsWith("192.168."))
-        ? "http://localhost:5002" 
-        : "https://codevibe-3.onrender.com";
-      
-      console.log("Selected Backend URL:", backendUrl);
-      console.log("Current Hostname:", window.location.hostname);
+      console.log("Using Backend URL:", API_BASE_URL);
         
-      const res = await axios.post(`${backendUrl}/api/auth/forgot-password`, {
+      const res = await axios.post(`${API_BASE_URL}/api/auth/forgot-password`, {
         Email: email,
       });
       setResponseMsg(res.data.message);
