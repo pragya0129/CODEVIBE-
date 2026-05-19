@@ -16,6 +16,7 @@ import mongoLogo from '../assets/mongoLogo.png';
 const Courses = () => {
   const [search, setSearch] = useState('');
   const [user, setUser] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   useEffect(() => {
     const loggedInUser = localStorage.getItem('user');
@@ -31,66 +32,80 @@ const Courses = () => {
       desc: 'Start your web development journey with HTML.',
       img: htmlLogo,
       link: '/HtmlLesson',
+      category: 'Frontend',
     },
     {
       title: 'CSS for Beginners',
       desc: 'Learn how to style beautiful websites.',
       img: cssLogo,
       link: '/CssLesson',
+      category: 'Frontend',
     },
     {
       title: 'JS for Beginners',
       desc: 'Learn how to give functionality to websites.',
       img: jsLogo,
       link: '/JsLesson',
+      category: 'Frontend',
     },
     {
       title: 'C Language for You!',
       desc: 'Master the fundamentals of C programming.',
       img: cLogo,
       link: '/CLesson',
+      category: 'Programming',
     },
     {
       title: 'OOP Concepts',
       desc: 'Learn object-oriented programming concepts.',
       img: OOPLogo,
       link: '/OopLesson',
+      category: 'Programming',
     },
     {
       title: 'Data Structures & Algorithms',
       desc: 'Build strong problem-solving skills.',
       img: dsaLogo,
       link: '/DsaLesson',
+      category: 'Programming',
     },
     {
       title: 'Node.js',
       desc: 'Learn backend development with Node.js.',
       img: nodeLogo,
       link: '/NodeLesson',
+      category: 'Backend',
     },
     {
       title: 'React.js',
       desc: 'Build modern frontend applications.',
       img: reactLogo,
       link: '/ReactLesson',
+      category: 'Frontend',
     },
     {
       title: 'Express.js',
       desc: 'Fast and minimal backend framework.',
       img: expressLogo,
       link: '/ExpressLesson',
+      category: 'Backend',
     },
     {
       title: 'MongoDB',
       desc: 'Learn modern NoSQL database concepts.',
       img: mongoLogo,
       link: '/MongoLesson',
+      category: 'Database',
     },
   ];
 
-  const filteredCourses = courses.filter((course) =>
-    course.title.toLowerCase().includes(search.toLowerCase())
-  );
+  const categories = ['All', ...new Set(courses.map(course => course.category))];
+
+  const filteredCourses = courses.filter((course) => {
+    const matchesSearch = course.title.toLowerCase().includes(search.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' || course.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <div>
@@ -116,6 +131,18 @@ const Courses = () => {
           onChange={(e) => setSearch(e.target.value)}
           className="search-input"
         />
+      </div>
+
+      <div className="category-filter-container">
+        {categories.map((category) => (
+          <button
+            key={category}
+            onClick={() => setSelectedCategory(category)}
+            className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
+          >
+            {category}
+          </button>
+        ))}
       </div>
 
       <div className="course-name">
