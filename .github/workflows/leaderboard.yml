@@ -1,0 +1,67 @@
+name: Contributor Leaderboard
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    types:
+      - opened
+      - closed
+      - synchronize
+
+  issues:
+    types:
+      - closed
+
+jobs:
+  update-leaderboard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Extract Contributor Data
+        id: contributor
+        run: |
+          echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
+          echo "EVENT_NAME=${{ github.event_name }}" >> $GITHUB_ENV
+
+      - name: Calculate Points
+        id: points
+        run: |
+          POINTS=0
+
+          if [[ "${{ github.event_name }}" == "push" ]]; then
+            POINTS=5
+          fi
+
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+
+            if [[ "${{ github.event.action }}" == "opened" ]]; then
+              POINTS=10
+            fi
+
+            if [[ "${{ github.event.pull_request.merged }}" == "true" ]]; then
+              POINTS=30
+            fi
+          fi
+
+          if [[ "${{ github.event_name }}" == "issues" ]]; then
+            POINTS=20
+          fi
+
+          echo "POINTS=$POINTS" >> $GITHUB_ENV
+
+      - name: Send Data to Backend
+        run: |
+          curl -X POST ${{ secrets.LEADERBOARD_API }} \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bearer ${{ secrets.API_TOKEN }}" \
+          -d '{
+            "username": "'"$USERNAME"'",
+            "event": "'"$EVENT_NAME"'",
+            "points": "'"$POINTS"'"
+          }'
