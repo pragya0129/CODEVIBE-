@@ -568,11 +568,12 @@ h3 {
 /* Goals Section */
 .goal {
   background: linear-gradient(135deg, #1a1f3a 0%, #242a45 100%);
-  padding: 3rem 2rem;
+  padding: 2rem;
   text-align: center;
   border-top: 3px solid var(--primary-red);
   border-bottom: 3px solid var(--secondary-pink);
   box-shadow: inset 0 0 30px rgba(255, 77, 109, 0.15);
+  margin: 0;
 }
 
 .goal h2 {
@@ -624,6 +625,8 @@ h3 {
   font-size: 0.95rem;
   position: relative;
   overflow: hidden;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 /* Subtle animated glow on footer background */
@@ -1078,7 +1081,23 @@ h3 {
   color: var(--text-secondary);
   background: linear-gradient(135deg, transparent, rgba(255, 77, 109, 0.05));
   border-radius: 8px;
-  margin: 1.5rem 0;
+  margin: 0;
+}
+
+/* Remove lesson styling when applied to footer */
+.lesson.site-footer {
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Reduce padding for lesson wrapper containing goal section */
+.lesson:has(> .goal) {
+  padding: 0;
+  margin: 0;
+  background: none;
+  border-radius: 0;
 }
 
 .lesson h1,
