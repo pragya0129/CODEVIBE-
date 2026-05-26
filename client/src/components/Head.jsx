@@ -93,12 +93,12 @@ const clearSearch = () => {
             <FaBook className="nav-icon" />
             <span>Lessons</span>
           </Link>
+          <Link to="/dashboard" className={`nav-link ${location.pathname === '/dashboard' ? 'nav-link--active' : ''}`}>
+            <FaUser className="nav-icon" />
+            <span>My Profile</span>
+          </Link>
           {user ? (
             <>
-              <Link to="/dashboard" className={`nav-link ${location.pathname === '/dashboard' ? 'nav-link--active' : ''}`}>
-                <FaUser className="nav-icon" />
-                <span>My Profile</span>
-              </Link>
               <Link to="/login" onClick={handleLogout} className="nav-link">
                 <FaSignOutAlt className="nav-icon" />
                 <span>Logout</span>
@@ -136,11 +136,11 @@ const clearSearch = () => {
         <Link to="/lessons" className="nav-link" onClick={() => setMenuOpen(false)}>
           <FaBook className="nav-icon" /><span>Lessons</span>
         </Link>
+        <Link to="/dashboard" className="nav-link" onClick={() => setMenuOpen(false)}>
+          <FaUser className="nav-icon" /><span>My Profile</span>
+        </Link>
         {user ? (
           <>
-            <Link to="/dashboard" className="nav-link" onClick={() => setMenuOpen(false)}>
-              <FaUser className="nav-icon" /><span>My Profile</span>
-            </Link>
             <Link to="/login" onClick={handleLogout} className="nav-link">
               <FaSignOutAlt className="nav-icon" /><span>Logout</span>
             </Link>
