@@ -16,8 +16,8 @@ Last updated: 2026-05-27
 | --- | --- | ---: | ---: | ---: | ---: |
 | 1 | [@sricharan-213](https://github.com/sricharan-213) | 131 | 8 | 7 | 9 |
 | 2 | [@Aayuiiitmg](https://github.com/Aayuiiitmg) | 104 | 12 | 8 | 0 |
-| 3 | [@pranav-cholleti](https://github.com/pranav-cholleti) | 86 | 18 | 3 | 4 |
-| 4 | [@namrarafique93-del](https://github.com/namrarafique93-del) | 78 | 9 | 4 | 4 |
+| 3 | [@namrarafique93-del](https://github.com/namrarafique93-del) | 87 | 11 | 4 | 5 |
+| 4 | [@pranav-cholleti](https://github.com/pranav-cholleti) | 86 | 18 | 3 | 4 |
 | 5 | [@divyagsharma2006-blip](https://github.com/divyagsharma2006-blip) | 65 | 5 | 4 | 3 |
 | 6 | [@Mahi-19-design](https://github.com/Mahi-19-design) | 65 | 5 | 4 | 3 |
 | 7 | [@vasheekhan](https://github.com/vasheekhan) | 60 | 5 | 3 | 4 |
@@ -31,8 +31,8 @@ Last updated: 2026-05-27
 | 15 | [@StarDustNova-57](https://github.com/StarDustNova-57) | 41 | 3 | 2 | 3 |
 | 16 | [@advikdivekar](https://github.com/advikdivekar) | 40 | 5 | 3 | 0 |
 | 17 | [@Tech4Aditya](https://github.com/Tech4Aditya) | 36 | 3 | 2 | 2 |
-| 18 | [@RehanAhmad25](https://github.com/RehanAhmad25) | 34 | 2 | 2 | 2 |
-| 19 | [@alenalex-009](https://github.com/alenalex-009) | 32 | 1 | 2 | 2 |
+| 18 | [@alenalex-009](https://github.com/alenalex-009) | 34 | 2 | 2 | 2 |
+| 19 | [@RehanAhmad25](https://github.com/RehanAhmad25) | 34 | 2 | 2 | 2 |
 | 20 | [@indresh404](https://github.com/indresh404) | 32 | 6 | 1 | 2 |
 | 21 | [@jagrati7305](https://github.com/jagrati7305) | 31 | 3 | 2 | 1 |
 | 22 | [@tazmeen24](https://github.com/tazmeen24) | 29 | 7 | 1 | 1 |
