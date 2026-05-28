@@ -59,9 +59,13 @@ exports.getCertificateInfo = async (req, res) => {
     .filter(([lessonId]) => lessonId.toLowerCase().startsWith(prefix))
     .map(([, val]) => val);
 
-    const score = courseScores.length
-      ? Math.round(courseScores.reduce((a, b) => a + b, 0) / courseScores.length)
-      : 0;
+
+     const score = courseScores.length
+       ? Math.round(
+           courseScores.reduce((a, b) => a + b, 0) /
+           courseScores.length
+         )
+       : 0;
 
     // Count only lessons that belong to this course
     const completedLessons = (progress.completedLessons || []).filter((id) =>

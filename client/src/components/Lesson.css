@@ -13,9 +13,9 @@
 
 .lesson-content {
   width: 100%;
-  max-width: fit-content;
+  max-width: 1000px;
   margin: 0 auto;
-  padding:0 24px ;
+  padding: 0 24px;
 }
 
 /* =========================
@@ -211,17 +211,7 @@
 /* =========================
    MOBILE
 ========================= */
-
-@media (max-width: 480px) {
-
-  .lesson {
-    padding: 1.5rem 0.8rem;
-  }
-
-  .lesson-content{
-    padding-left: 56px !important;
-  }
-  .lesson-section {
+.lesson-section {
     padding-left: 1.2rem;
 
     margin-bottom: 1.5rem;
@@ -241,5 +231,38 @@
 
   .next-lesson-btn {
     width: 100%;
+  }
+
+
+.sidebar-toggle {
+  margin-right: 12px;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 95, 143, 0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 95, 143, 0.8);
+}
+.course-item.active {
+  box-shadow: 0 0 12px rgba(255,95,143,0.3);
+}
+.lesson-text,
+.lesson-list {
+  max-width: 70ch;
+}
+.lesson-content{
+  padding-left: 0 16px;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }

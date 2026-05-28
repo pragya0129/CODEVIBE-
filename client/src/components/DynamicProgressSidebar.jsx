@@ -117,7 +117,9 @@ const DynamicProgressSidebar = () => {
     ? Math.round(courseScores.reduce((total, score) => total + score, 0) / courseScores.length)
     : 0;
   const totalPoints = courseScores.reduce((total, score) => total + score, 0);
-
+  const toggleSidebar = () => {
+  setIsCollapsed((current) => !current);
+};
   return (
     <aside
       className={`dynamic-progress-sidebar ${
@@ -128,8 +130,9 @@ const DynamicProgressSidebar = () => {
         <button
           className="dynamic-progress-sidebar__toggle"
           type="button"
-          onClick={() => setIsCollapsed((current) => !current)}
+          onClick={toggleSidebar}
           aria-label="Expand progress sidebar"
+          aria-expanded={!isCollapsed}
         >
           {">"}
         </button>
@@ -145,8 +148,9 @@ const DynamicProgressSidebar = () => {
             <button
               className="dynamic-progress-sidebar__toggle"
               type="button"
-              onClick={() => setIsCollapsed((current) => !current)}
+              onClick={toggleSidebar}
               aria-label="Collapse progress sidebar"
+              aria-expanded={!isCollapsed}
             >
               {"<"}
             </button>

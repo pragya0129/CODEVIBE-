@@ -143,10 +143,7 @@ const JsLesson = () => {
               className="course-card"
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
-              style={{
-                transform: isHovered ? 'translateY(-4px)' : 'translateY(0)',
-                transition: 'all 0.3s ease'
-              }}
+              
             >
               {/* Difficulty Badge */}
               <div className="badge-container">
