@@ -76,6 +76,30 @@ const roadmapData = {
       "Monitoring & Scaling",
     ],
   },
+  DSA: {
+    Beginner: [
+      "Arrays",
+      "Strings",
+      "Time Complexity",
+      "Basic Recursion",
+    ],
+    Intermediate: [
+      "Linked Lists",
+      "Stack & Queue",
+      "Trees",
+      "Binary Search",
+      "Sliding Window",
+      "Sorting Algorithms",
+    ],
+    Advanced: [
+      "Graphs",
+      "Dynamic Programming",
+      "Greedy Algorithms",
+      "Tries",
+      "Backtracking",
+      "Segment Trees",
+    ],
+  },
 };
 
 const RoadmapGenerator = () => {
