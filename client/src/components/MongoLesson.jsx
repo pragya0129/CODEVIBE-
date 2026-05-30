@@ -240,6 +240,7 @@ const MongoLesson = () => {
         .header-icon {
           font-size: 3.5rem;
           color: #4db33d;
+          filter: drop-shadow(0 0 12px rgba(0,237,100,0.7));
           animation: float 3s ease-in-out infinite;
         }
 
@@ -306,7 +307,7 @@ const MongoLesson = () => {
         }
 
         .progress-fill {
-          background: linear-gradient(90deg, #4db33d, #8bc34a);
+          background: linear-gradient(90deg, #00ED64,#16A34A);
           height: 100%;
           border-radius: 10px;
           transition: width 0.5s ease;
@@ -467,7 +468,7 @@ const MongoLesson = () => {
           align-items: center;
           gap: 8px;
           padding: 10px 20px;
-          background: #4db33d;
+          background: linear-gradient(90deg,#00ED64,#16A34A);
           border: none;
           border-radius: 8px;
           color: white;
@@ -479,6 +480,8 @@ const MongoLesson = () => {
         }
 
         .course-card:hover .start-btn {
+        box-shadow:
+  0 0 12px rgba(0,237,100,0.7);
           background: #3d8a30;
           gap: 12px;
         }

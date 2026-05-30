@@ -228,7 +228,8 @@ const CLesson = () => {
 
         .header-icon {
           font-size: 3.5rem;
-          color: #2d6a4f;
+          color: #22c55e;
+          text-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
           animation: float 3s ease-in-out infinite;
         }
 
@@ -295,7 +296,7 @@ const CLesson = () => {
         }
 
         .progress-fill {
-          background: linear-gradient(90deg, #2d6a4f, #52b788);
+          background: linear-gradient( 90deg, #86efac, #22c55e);
           height: 100%;
           border-radius: 10px;
           transition: width 0.5s ease;
@@ -448,7 +449,7 @@ const CLesson = () => {
           align-items: center;
           gap: 8px;
           padding: 10px 20px;
-          background: #2d6a4f;
+          background: linear-gradient(90deg,#86efac,#22c55e);
           border: none;
           border-radius: 8px;
           color: white;
@@ -461,6 +462,7 @@ const CLesson = () => {
 
         .course-card:hover .start-btn {
           background: #1b4d3e;
+          box-shadow: 0 0 15px rgba(34, 197, 94, 0.35);
           gap: 12px;
         }
 

@@ -224,7 +224,8 @@ const DSALesson = () => {
 
         .header-icon {
           font-size: 3.5rem;
-          color: #00cec9;
+            color: #22d3ee;
+  filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.5));
           animation: float 3s ease-in-out infinite;
         }
 
@@ -291,7 +292,7 @@ const DSALesson = () => {
         }
 
         .progress-fill {
-          background: linear-gradient(90deg, #00cec9, #0984e3);
+          background: linear-gradient(90deg,#22d3ee,#06b6d4);
           height: 100%;
           border-radius: 10px;
           transition: width 0.5s ease;
@@ -430,7 +431,7 @@ const DSALesson = () => {
           align-items: center;
           gap: 8px;
           padding: 10px 20px;
-          background: #00cec9;
+          background: linear-gradient(90deg,#22d3ee,#06b6d4);
           border: none;
           border-radius: 8px;
           color: #1a1a2e;
@@ -442,7 +443,7 @@ const DSALesson = () => {
         }
 
         .course-card:hover .start-btn {
-          background: #00b894;
+          background: linear-gradient(90deg,#00b894,#009474);
           gap: 12px;
         }
 

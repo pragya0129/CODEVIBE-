@@ -208,7 +208,8 @@ const CssLesson = () => {
 
         .header-icon {
           font-size: 3.5rem;
-          color: #2965f1;
+            color: #c084fc;
+  filter: drop-shadow(0 0 4px #c084fc);
           animation: float 3s ease-in-out infinite;
         }
 
@@ -275,7 +276,7 @@ const CssLesson = () => {
         }
 
         .progress-fill {
-          background: linear-gradient(90deg, #2965f1, #00b894);
+          background: linear-gradient( 90deg, #c084fc, #ec4899);
           height: 100%;
           border-radius: 10px;
           transition: width 0.5s ease;
@@ -315,7 +316,11 @@ const CssLesson = () => {
 
         /* Course Card */
         .course-card {
-          background: rgba(255, 255, 255, 0.05);
+            background: linear-gradient(
+    135deg,
+    rgba(192,132,252,0.12),
+    rgba(236,72,153,0.08)
+  );
           backdrop-filter: blur(10px);
           border-radius: 16px;
           padding: 24px;
@@ -383,7 +388,7 @@ const CssLesson = () => {
         }
 
         .course-category {
-          color: #2965f1;
+          color: #ec4899;
           font-size: 0.85rem;
           margin-bottom: 8px;
           font-weight: 500;
@@ -417,7 +422,7 @@ const CssLesson = () => {
           align-items: center;
           gap: 8px;
           padding: 10px 20px;
-          background: #2965f1;
+          background: linear-gradient(90deg,#c084fc,#ec4899);
           border: none;
           border-radius: 8px;
           color: white;

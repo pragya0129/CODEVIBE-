@@ -226,7 +226,8 @@ const ExpressLesson = () => {
 
         .header-icon {
           font-size: 3.5rem;
-          color: #000000;
+          color: #b2c8e3;
+          filter: drop-shadow(0 0 10px rgba(203,213,225,0.6));
           background: white;
           border-radius: 20px;
           padding: 10px;
@@ -296,7 +297,7 @@ const ExpressLesson = () => {
         }
 
         .progress-fill {
-          background: linear-gradient(90deg, #000000, #333333);
+          background: linear-gradient(90deg,#94a3b8,#cbd5e1);
           height: 100%;
           border-radius: 10px;
           transition: width 0.5s ease;
@@ -448,7 +449,7 @@ const ExpressLesson = () => {
           align-items: center;
           gap: 8px;
           padding: 10px 20px;
-          background: #000000;
+          background: linear-gradient(90deg,#64748b,#94a3b8);
           border: none;
           border-radius: 8px;
           color: white;
@@ -460,8 +461,8 @@ const ExpressLesson = () => {
         }
 
         .course-card:hover .start-btn {
-          background: #333333;
-          gap: 12px;
+        background: linear-gradient(90deg, #94a3b8,#cbd5e1);
+        gap: 12px;
         }
 
         .btn-arrow {

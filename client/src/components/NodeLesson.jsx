@@ -227,6 +227,7 @@ const NodeLesson = () => {
         .header-icon {
           font-size: 3.5rem;
           color: #68a063;
+filter: drop-shadow(0 0 10px rgba(104,160,99,0.8));
           animation: float 3s ease-in-out infinite;
         }
 
@@ -293,7 +294,7 @@ const NodeLesson = () => {
         }
 
         .progress-fill {
-          background: linear-gradient(90deg, #68a063, #8bc34a);
+          background: linear-gradient(90deg,#68a063,8cc84b);
           height: 100%;
           border-radius: 10px;
           transition: width 0.5s ease;
@@ -446,6 +447,11 @@ const NodeLesson = () => {
           gap: 8px;
           padding: 10px 20px;
           background: #68a063;
+          background: linear-gradient(
+  90deg,
+  #68a063,
+  #8cc84b
+);
           border: none;
           border-radius: 8px;
           color: white;

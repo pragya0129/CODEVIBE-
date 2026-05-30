@@ -240,7 +240,8 @@ const JsLesson = () => {
 
         .header-icon {
           font-size: 3.5rem;
-          color: #f7df1e;
+         color: #facc15;
+  filter: drop-shadow(0 0 12px rgba(250, 204, 21, 0.6));
           animation: float 3s ease-in-out infinite;
         }
 
@@ -307,7 +308,7 @@ const JsLesson = () => {
         }
 
         .progress-fill {
-          background: linear-gradient(90deg, #f7df1e, #f39c12);
+          background: linear-gradient(90deg, #fde68a, #facc15);
           height: 100%;
           border-radius: 10px;
           transition: width 0.5s ease;
@@ -468,16 +469,22 @@ const JsLesson = () => {
           align-items: center;
           gap: 8px;
           padding: 10px 20px;
-          background: #f7df1e;
+          background: linear-gradient(90deg, #fde68a, #facc15);
+          color: #1a1a1a;
+          box-shadow: 0 0 15px rgba(250, 204, 21, 0.35);
           border: none;
           border-radius: 8px;
-          color: #1a1a2e;
           font-weight: bold;
           cursor: pointer;
           transition: all 0.3s ease;
           width: 100%;
           justify-content: center;
         }
+        
+        .course-category {
+          color: #FACC15;
+        }
+
 
         .course-card:hover .start-btn {
           background: #f39c12;

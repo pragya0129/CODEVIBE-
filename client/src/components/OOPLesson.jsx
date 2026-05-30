@@ -230,7 +230,8 @@ const OOPLesson = () => {
 
         .header-icon {
           font-size: 3.5rem;
-          color: #e17055;
+          color: #e67e5f;
+          filter: drop-shadow(0 0 6px rgba(230,126,95,0.9));
           animation: float 3s ease-in-out infinite;
         }
 
@@ -449,7 +450,7 @@ const OOPLesson = () => {
           align-items: center;
           gap: 8px;
           padding: 10px 20px;
-          background: #e17055;
+          background: linear-gradient(90deg,#f4a261,#e67e5f);
           border: none;
           border-radius: 8px;
           color: white;

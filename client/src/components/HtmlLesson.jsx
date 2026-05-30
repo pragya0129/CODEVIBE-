@@ -170,7 +170,8 @@ const HtmlLesson = () => {
 
         .header-icon {
           font-size: 3.5rem;
-          color: #ff4d4d;
+           color: #FF6B81;
+          filter: drop-shadow(0 0 10px #FF6B81);
           animation: float 3s ease-in-out infinite;
         }
 
@@ -248,7 +249,7 @@ const HtmlLesson = () => {
         }
 
         .progress-fill {
-          background: linear-gradient(90deg, #ff4d4d, #ff8c4d);
+          background: linear-gradient(90deg, #FF6B81, #EC4899);
           height: 100%;
           border-radius: 10px;
           transition: width 0.5s ease;
@@ -344,7 +345,7 @@ const HtmlLesson = () => {
         }
 
         .course-category {
-          color: #ff4d4d;
+          color: #FF6B81;
           font-size: 0.85rem;
           margin-bottom: 8px;
           font-weight: 500;
@@ -373,7 +374,7 @@ const HtmlLesson = () => {
           align-items: center;
           gap: 8px;
           padding: 10px 20px;
-          background: #ff4d4d;
+            background: linear-gradient(90deg, #FF6B81, #EC4899);
           border: none;
           border-radius: 8px;
           color: white;
