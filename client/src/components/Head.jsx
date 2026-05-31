@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../AuthProvider.jsx";
 import { useSearch } from "../context/SearchContext.jsx";
 import { useDebounce } from "../hooks/useDebounce"; // added
@@ -30,7 +30,8 @@ const Head = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { user, logout } = useAuth();
-  const isHomePage = location.pathname === '/' || location.pathname === '/lessons';
+  const isHomePage =
+    location.pathname === "/" || location.pathname === "/lessons";
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -72,7 +73,7 @@ const Head = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const exactMatch = COURSES.find(
-      (c) => c.label.toLowerCase() === query.trim().toLowerCase()
+      (c) => c.label.toLowerCase() === query.trim().toLowerCase(),
     );
     if (exactMatch) {
       handleSelect(exactMatch);
@@ -100,12 +101,21 @@ const Head = () => {
       <div className="header-top">
         <div className="header-logo-wrapper">
           <Link to="/" aria-label="Go to homepage" className="logo-link">
-            <img src={logo} alt="CodeVibe Logo" title="CodeVibe - Learn. Practice. Master." />
+            <img
+              src={logo}
+              alt="CodeVibe Logo"
+              title="CodeVibe - Learn. Practice. Master."
+            />
           </Link>
         </div>
 
         {/* Desktop Nav */}
         <nav className="header-nav" aria-label="Main navigation">
+          {/* Glossary visible to ALL users */}
+          <Link to="/glossary" className="nav-link">
+            <span>Glossary</span>
+          </Link>
+
           {user ? (
             <>
               <Link to="/dashboard" className="nav-link">
@@ -145,23 +155,52 @@ const Head = () => {
       </div>
 
       {/* Mobile Nav Drawer */}
-      <nav className={`mobile-nav ${menuOpen ? "mobile-nav--open" : ""}`} aria-label="Mobile navigation">
+      <nav
+        className={`mobile-nav ${menuOpen ? "mobile-nav--open" : ""}`}
+        aria-label="Mobile navigation"
+      >
+        <Link
+          to="/glossary"
+          className="nav-link"
+          onClick={() => setMenuOpen(false)}
+        >
+          <span>Glossary</span>
+        </Link>
         {user ? (
           <>
-            <Link to="/dashboard" className="nav-link" onClick={() => setMenuOpen(false)}>
-              <FaTachometerAlt className="nav-icon" /><span>Dashboard</span>
+            <Link
+              to="/dashboard"
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              <FaTachometerAlt className="nav-icon" />
+              <span>Dashboard</span>
             </Link>
             <Link to="/login" onClick={handleLogout} className="nav-link">
-              <FaSignOutAlt className="nav-icon" /><span>Logout</span>
+              <FaSignOutAlt className="nav-icon" />
+              <span>Logout</span>
             </Link>
           </>
         ) : (
           <>
-            <Link to="/login" className="nav-link" onClick={() => setMenuOpen(false)}>
-              <FaSignInAlt className="nav-icon" /><span>Login</span>
+            <Link
+              to="/login"
+              onClick={() => {
+                handleLogout();
+                setMenuOpen(false);
+              }}
+              className="nav-link"
+            >
+              <FaSignOutAlt className="nav-icon" />
+              <span>Logout</span>
             </Link>
-            <Link to="/signup" className="nav-link" onClick={() => setMenuOpen(false)}>
-              <FaUserPlus className="nav-icon" /><span>Sign Up</span>
+            <Link
+              to="/signup"
+              className="nav-link"
+              onClick={() => setMenuOpen(false)}
+            >
+              <FaUserPlus className="nav-icon" />
+              <span>Sign Up</span>
             </Link>
           </>
         )}
@@ -175,7 +214,10 @@ const Head = () => {
             CodeVibe
             <FaGamepad className="title-icon" />
           </h1>
-          <p className="header-tagline">Learn &bull; Practice &bull; Master &bull; Code &mdash; Level Up Your Programming Skills</p>
+          <p className="header-tagline">
+            Learn &bull; Practice &bull; Master &bull; Code &mdash; Level Up
+            Your Programming Skills
+          </p>
         </div>
       )}
 
