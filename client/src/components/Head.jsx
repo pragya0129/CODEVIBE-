@@ -85,6 +85,11 @@ const clearSearch = () => {
   inputRef.current?.focus();
 };
 
+  // Make sure to add FaQuestionCircle to your react-icons/fa imports at the top:
+// import { ..., FaQuestionCircle } from "react-icons/fa";
+
+// ... your existing handler functions ...
+
   return (
     <header className="site-header">
       {/* Row 1: Logo + Nav + Hamburger */}
@@ -97,6 +102,16 @@ const clearSearch = () => {
 
         {/* Desktop Nav */}
         <nav className="header-nav" aria-label="Main navigation">
+          {/* 1. Public Link: Available to everyone */}
+          <Link 
+  to="/lessons" 
+  state={{ scrollToFaq: true }} 
+  className="nav-link"
+>
+  <span>FAQ</span>
+</Link>
+
+          {/* 2. Conditional Links based on Auth State */}
           {user ? (
             <>
               <Link to="/dashboard" className="nav-link">
