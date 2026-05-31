@@ -25,9 +25,9 @@ Last updated: 2026-05-31
 | 9 | [@DebasmitaBose0](https://github.com/DebasmitaBose0) | 80 | 0 | 0 | 16 |
 | 10 | [@StarDustNova-57](https://github.com/StarDustNova-57) | 75 | 5 | 4 | 5 |
 | 11 | [@divyagsharma2006-blip](https://github.com/divyagsharma2006-blip) | 65 | 5 | 4 | 3 |
-| 12 | [@vasheekhan](https://github.com/vasheekhan) | 60 | 5 | 3 | 4 |
-| 13 | [@codedbydollys10](https://github.com/codedbydollys10) | 51 | 13 | 2 | 1 |
-| 14 | [@jagrati7305](https://github.com/jagrati7305) | 50 | 5 | 3 | 2 |
+| 12 | [@jagrati7305](https://github.com/jagrati7305) | 60 | 5 | 4 | 2 |
+| 13 | [@vasheekhan](https://github.com/vasheekhan) | 60 | 5 | 3 | 4 |
+| 14 | [@codedbydollys10](https://github.com/codedbydollys10) | 51 | 13 | 2 | 1 |
 | 15 | [@Haritha-054](https://github.com/Haritha-054) | 49 | 2 | 2 | 5 |
 | 16 | [@riteshpatil9686-lgtm](https://github.com/riteshpatil9686-lgtm) | 47 | 11 | 2 | 1 |
 | 17 | [@Smrithi-krishna](https://github.com/Smrithi-krishna) | 46 | 8 | 2 | 2 |
@@ -132,4 +132,5 @@ Last updated: 2026-05-31
 | 116 | [@varsha-2503](https://github.com/varsha-2503) | 5 | 0 | 0 | 1 |
 | 117 | [@VEDIKAGULWANI](https://github.com/VEDIKAGULWANI) | 5 | 0 | 0 | 1 |
 | 118 | [@weiwei-gitch](https://github.com/weiwei-gitch) | 5 | 0 | 0 | 1 |
-| 119 | [@yashvini-chirri](https://github.com/yashvini-chirri) | 5 | 0 | 0 | 1 |
+| 119 | [@YASHcode-IIITV](https://github.com/YASHcode-IIITV) | 5 | 0 | 0 | 1 |
+| 120 | [@yashvini-chirri](https://github.com/yashvini-chirri) | 5 | 0 | 0 | 1 |
